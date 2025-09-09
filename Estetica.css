@@ -1,5 +1,4 @@
 #pai{
-    .container {
   display: flex;
 }
 
@@ -12,19 +11,22 @@
   /* Outras estilizações */
 }
 
-}
-/* #produto{
-    width: 30%;
-    margin: auto;   
-    background: rgb(146, 46, 46);
-    padding: 20px;
-} */
-#camisa > button{
-    margin: auto;   
-    background: rgb(136, 146, 46);
-    padding: 20px;
+#produto{
     align-items: center;
 
+    width: 30%;
+    margin: auto;   
+    background: rgb(111, 146, 46);
+    padding: 20px;
+}
+
+#camisa{
+    margin: auto;   
+    background: rgb(146, 46, 76);
+    padding: 20px;
+}
+button{
+    align-items: end;
 }
 #carrinho{
     width: 30%;
