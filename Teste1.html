@@ -32,5 +32,65 @@ função do calculo final Paulo.
 
     </div>
     </main>
+<script>
+/* Lista de produtos*/    
+let produtos = [
+    {id:1, nome: "Camisa", preço: 200},
+    {id:2, nome: "Tênis",preço: 120},
+    {id:3, nome: "livro",preço: 80},
+
+]
+// carrinho vazio
+let carrinho = [];
+
+let listaProdutos = document.getElementById("lista-produtos");
+
+let divCarrinho = document.getElementById("carrinho");
+
+/*função para renderizar os produtos*/
+
+function RenderizarProdutos(){
+    produtos.forEach(produto => {
+    const div = document.createElement("div");
+    div.ClassList.add("produto");
+    });
+}
+div.innerHtml =`
+
+<p> ${produto.nome} - R$ ${produto.preco}</p>
+<button onclick="AdicionarAoCarrinho(${produto.id})">Adicionar ao carrinho</button>
+`;
+listaProdutos.appendChild(div); 
+
+
+
+// Função para adicionar item ao carrinho.
+function adicionarAoCarrinho(){
+    let produto = produtos.find(p=> p.id === id);
+    carrinho.push(produto);
+    atualizarCarrinho();
+
+}
+
+function mostrarCarrinho(){
+    divCarrinho.innerHTML =""; // limpa o carrinho antes de atualizar.
+
+
+
+if (carrinho.length ===0){
+    divCarrinho.innerHTML = <p> o carrinho está vazio</p>; return;
+    
+}
+
+carrinho.forEach((item) => {
+    const itemDiv = document.createElement("p");
+    itemDiv.textContent = ` ${item.nome} - R$ ${item.preco}`;
+    divCarrinho:appendChild(itemDiv);
+
+
+});
+}
+</script>
+
 </body>
 </html>
